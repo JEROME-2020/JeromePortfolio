@@ -26,10 +26,16 @@ header{
     background: #111;
     width: 100%;
     padding: 20px 0px 20px 0px;
-    border-bottom: solid 4px rgb(219, 241, 76);
+    border-bottom: solid 4px #DBF14C;
     z-index: 2;
-    position: relative;
+    position: fixed;
     
+}
+.bannerAddPadding{
+    padding-top: 175px;
+}
+.paddindRemove{
+    padding-bottom: 20px;
 }
 
 
@@ -79,11 +85,11 @@ header{
 }
 
 .rowBox:nth-child(2) .navMenu .menuList .menuLink:hover{
-    color: rgb(219, 241, 76);
+    color: #DBF14C;
 }
 .rowBox:nth-child(2) .navMenu .menuList .menuLink::after{
     content: "";
-    background: rgb(219, 241, 76);
+    background: #DBF14C;
     width: 0px;
     display: block;
     transition: 100ms ease-in-out;
@@ -96,7 +102,7 @@ header{
 }
 
 .rowBox:nth-child(2) .navMenu .navLogin{
-    background: rgb(219, 241, 76);
+    background: #DBF14C;
     padding: 12px 30px 12px 30px;
     border-radius: 5px;
     color: #111;
@@ -111,7 +117,7 @@ header{
 }
 
 /* 
-This is resposive menu */
+This is responsive menu */
 .toggleBtn{
     display: none;
 }
@@ -130,19 +136,23 @@ section{
 }
 
 .name{
-    color: rgb(219, 241, 76);
+    color: #DBF14C;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 
 .ctaBtn{
-    background: rgb(219, 241, 76);
+    background: #DBF14C;
     text-decoration: none;
     color: #111;
     font-size: 20px;
     border-radius: 5px;
     padding: 18px 30px 18px;
+    transition: 100ms ease-in-out;
 }
-
+.ctaBtn:hover{
+    background: rgb(227, 228, 216);
+}
 
 
 
@@ -158,14 +168,105 @@ section{
 
 .banner .rowBox:nth-child(2) .jeromeImage{
   margin: auto;   
-  border: solid 4px rgb(219, 241, 76);
-  box-shadow: 20px 20px 1px rgb(219, 241, 76);
+  border: solid 4px #DBF14C;
+  box-shadow: 20px 20px 1px #DBF14C;
 }
 
 .jeromeImage img{
     width: 300px;
     height: 300px;
 }
+
+/* This is about section */
+
+.aboutSection{
+    background-image: url('../images/Bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+   
+}
+
+.geerColor1{
+    color: #fff;
+    transform: translateX(200px);
+    font-size: 50px;
+}
+.geerColor2{
+    color: #fff;
+    font-size: 50px;
+}
+.geerColor3{
+    color: #111;
+    position: absolute;
+    margin-top: 60px;
+    font-size: 75px;
+}
+
+.headingAbout{
+    color: #111;
+}
+
+.bodyText{
+    color: #111;
+}
+.about{
+    background: #111;
+    color: #fff;
+}
+.about:hover{
+    background: #DBF14C;
+    color: #111;
+    box-shadow: 1px 10px 10px rgba(17, 17, 17, 0.123);
+}
+
+/* 
+This is skills section */
+.aboutContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skillsrow:nth-child(1){
+    border: solid 1px #111;
+    padding-top: 100px;
+}
+.skillsrow:nth-child(2){
+    background: rgb(109, 103, 103);
+    padding-top: 100px;
+}
+
+
+.progress1, .progress2, .progress3{
+    background: #fff;
+    height: 20px;
+    width: 80%;
+    border-radius: 100px;
+}
+
+.progressInner1, .progressInner2, .progressInner3{
+    background: #DBF14C;
+    height: 20px;
+    width: 0%;
+    border-radius: 100px;
+    display: flex;
+    box-shadow: 0px 5px 10px rgba(17, 17, 17, 0.591);
+    transition: 2s linear;
+    
+
+}
+
+.counNumber1, .counNumber2, .counNumber3{
+    color: #111;
+    font-size: 15px;
+    margin: auto;
+    padding-left: 20px;
+    font-weight: 600;;
+}
+
+
+
+  
 
 
 /* This is the code for resposive */
@@ -244,6 +345,7 @@ section{
         width: 100%;
         height: 100vh;
         position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 1;
@@ -256,11 +358,13 @@ section{
         width: 70%;
         margin: 50px 0px 0px auto;
         border-bottom-left-radius: 100px;
-        height: 70%;
+        height: 65%;
         display: flex;
         animation: animate 1s;
     }
-    
+    .paddindRemove{
+        padding-bottom: 120px;
+    }
 
     @keyframes animate {
         from{
@@ -285,7 +389,7 @@ section{
         color: #fff;
     }
     .reposiveMenu .menuListR .menuLinkR:hover{
-        color: rgb(219, 241, 76);
+        color: #DBF14C;
     }
     
     .menuLinkR i{
@@ -295,7 +399,7 @@ section{
     
     .menuLinkR::after{
         content: "";
-        background: rgb(219, 241, 76);
+        background: #DBF14C;
         width: 0px;
         display: block;
         transition: 100ms ease-in-out;
@@ -343,12 +447,38 @@ section{
         font-size: 45px;
     }
 
+    /* This is about section */
+
+    .aboutContainer .rowBox:nth-child(1){
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+    .aboutContainer .rowBox:nth-child(2){
+        margin-bottom: 50px;
+        width: 80%;
+        display: flow-root;
+        margin: auto;
+        text-align: center;
+    }
+    .geerColor3{
+        font-size: 10vw;
+        margin-bottom: 10px;
+    }
+
 }
+
+
+
+/* This is skills section */
+
+
+
 
 /* 
 Mobile view */
 
-@media(max-width: 412px){
+@media(max-width: 500px){
 
     h1{
         font-size: 30px;
@@ -363,11 +493,16 @@ Mobile view */
     }
     .banner .rowBox:nth-child(2){
         margin-bottom: 50px;
-        width: 80%;
+        width: 100%;
     }
 
     .jeromeImage img{
         width: 200px;
         height: 200px;
+    }
+
+    .svgImage{
+        width: 250px;
+        height: 250px;
     }
 }
