@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -14,6 +15,11 @@ h1{
     font-weight: 600;
     padding: 0px 0px 20px 0px;
     line-height: 1.2em;
+}
+h2{
+    font-size: 30px;
+    color: #fff;
+    padding-top: 20px;
 }
 p{
     font-size: 20px;
@@ -228,23 +234,29 @@ This is skills section */
 }
 
 .skillsrow:nth-child(1){
-    border: solid 1px #111;
-    padding-top: 100px;
+    width: 450px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .skillsrow:nth-child(2){
-    background: rgb(109, 103, 103);
-    padding-top: 100px;
+    width: 450px;
+    text-align: center;
+
 }
 
 
-.progress1, .progress2, .progress3{
-    background: #fff;
+.progress1, .progress2, .progress3, .progress4, .progress5{
     height: 20px;
+    background: #fff;
+    margin: auto;
     width: 80%;
+    margin: 20px 0px 20px 0px;
     border-radius: 100px;
 }
 
-.progressInner1, .progressInner2, .progressInner3{
+.progressInner1, .progressInner2, .progressInner3, .progressInner4, .progressInner5{
     background: #DBF14C;
     height: 20px;
     width: 0%;
@@ -256,17 +268,127 @@ This is skills section */
 
 }
 
-.counNumber1, .counNumber2, .counNumber3{
+.counNumber1, .counNumber2, .counNumber3, .counNumber4, .counNumber5{
     color: #111;
     font-size: 15px;
     margin: auto;
-    padding-left: 20px;
-    font-weight: 600;;
+    font-weight: 600;
+}
+.countC1, .countC2, .countC3, .countC4{
+    color: #fff;
+    font-size: 15px;
+    margin: auto;
+    font-weight: 600;
 }
 
 
 
-  
+/* This is for circle progress bar */
+
+.holderProgress{
+    width: 100%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: auto auto;
+    display: grid;
+    padding: 20px;
+
+}
+
+
+
+.circleContainer{
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto 0px auto;
+}
+
+
+
+
+.circleOutter{
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+.circleInner{
+    border-radius: 50%;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background: #111;
+}
+
+
+.circle1{
+    fill: none;
+    stroke: #DBF14C;
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: animateProgress1 2s linear forwards;
+}
+.circle2{
+    fill: none;
+    stroke: #DBF14C;
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: animateProgress2 2.50s linear forwards;
+}
+.circle3{
+    fill: none;
+    stroke: #DBF14C;
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: animateProgress3 1s linear forwards;
+}
+.circle4{
+    fill: none;
+    stroke: #DBF14C;
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: animateProgress4 1s linear forwards;
+}
+
+
+@keyframes animateProgress1{
+    100%{
+        stroke-dashoffset: 250;
+    }
+}
+@keyframes animateProgress2{
+    100%{
+        stroke-dashoffset: 230;
+    }
+}
+@keyframes animateProgress3{
+    100%{
+        stroke-dashoffset: 250;
+    }
+}
+@keyframes animateProgress4{
+    100%{
+        stroke-dashoffset: 250;
+    }
+}
+
+.progressC{
+   transform: translate(0px, -100%);
+}
+
 
 
 /* This is the code for resposive */
@@ -466,6 +588,17 @@ This is skills section */
         margin-bottom: 10px;
     }
 
+    /* This is skills section  */
+
+    .skills{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills{
+        flex-wrap: wrap;
+    }
 }
 
 
@@ -479,6 +612,8 @@ This is skills section */
 Mobile view */
 
 @media(max-width: 500px){
+
+    
 
     h1{
         font-size: 30px;
@@ -504,5 +639,10 @@ Mobile view */
     .svgImage{
         width: 250px;
         height: 250px;
+    }
+
+    /* progress Circle */
+    .holderProgress{
+        grid-template-columns: 1fr;
     }
 }
